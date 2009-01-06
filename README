@@ -1,0 +1,35 @@
+dotUdotMe
+=========
+
+This is a javascript browser bookmarklet that will help with the following use cases:
+
+* Cycle through search results on google.com, google.co.uk, google.fr, google.cz, google.foo
+* Cycle between amazon.com and amazon.co.uk prices and comments
+* Swap between fr.wikipedia.org/Foo, de.wikipedia.org/Foo, and xx.wikipedia.org/Foo
+
+In short it swaps country-specific elements of the domain, which helps overcome geolocation defaults.
+
+Configuration
+-------------
+
+By default, the bookmarklet cycles .co.uk, .com, and .cz domains. This is configured in the **MAPPINGS** array.
+
+By default, it swaps en.wikipedia... and cs.wikipedia.... This is configured in **LANGUAGE_CODES** array.
+
+The **TLDS_TO_IGNORE** array configures which TLDs to ignore.  By default this is:
+
+    'gov', 'org', 'edu', 'mil', 
+    'info', 'coop', 'jobs', 
+    'mobi', 'museum', 'name', 
+    'aero', 'net', 'tel', 'travel',
+    'arpa', 'pro', 'asia', 'localhost'
+
+Testing
+-------
+
+You need to test it from localhost. Testing requires [Firebug](http://www.getfirebug.com).
+
+Limitations
+-----------
+
+dotUdotMe will not work in Internet Explorer 6. IE6 only allows bookmarklets of about 500 characters (http://subsimple.com/bookmarklets/rules.asp).
